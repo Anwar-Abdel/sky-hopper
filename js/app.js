@@ -29,8 +29,6 @@ class Character {
     }
 }
 
-
-
 // ====================== PAINT INTIAL SCREEN ======================= //
 
 // EVENT LISTENERS
