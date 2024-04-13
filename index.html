@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <canvas id ='board'></canvas>
     <div class="imageContainer">
-        <img src="./img/background.jpeg" width = "1200" height = "800" alt="background" id="background">
-        <img src="./img/bird.webp" alt="bird" id="bird">
+        <img src="./img/flappybirdbg.png" width = "360" height = "640" alt="background" id="background" style="display: none;">
+        <img src="./img/flappybird.png" alt="bird" id="bird" style="display: none;"> 
+        <img src="./img/toppipe.png" alt="top-pipe" id="top-pipe" style="display: none;">
+        <img src="./img/bottompipe.png" alt="bottom-pipe" id="bottom-pipe" style="display: none;"> 
     </div>
+    <div id="container">
+        <aside id="top-left"><h2>Fly!</h2></aside>
+        <aside id="top-right"><h2 id="movement"></h2></aside>
+        <main>
+            <canvas id="game"><!-- play it, a game --></canvas>
+        </main>
+        <aside id="btm-left"><h2 id="score">0</h2></aside>
+        <aside id="btm-right"><h2 id="status">play the game</h2></aside>
+      </div>
     <script src="js/app.js"></script>
 </body>
 </html>
