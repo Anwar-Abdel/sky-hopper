@@ -12,3 +12,38 @@ function updateScore() {
     counter++;
     document.getElementById("score").textContent = counter; // Update the HTML score
 }
+
+// ==================Function to generate rectangles=====================//
+function generateRectangles() {
+    rectangleInterval = setInterval(() => {
+        let random = -((Math.random()*300)+150);
+        hole.style.top = random + "px";
+        updateScore(); // Increment score when hole animation resets
+    }, 2000); // Interval set to 2 seconds
+}
+
+generateRectangles(); // Call the function to start generating rectangles immediately
+
+hole.addEventListener('animationiteration', () => {
+    // updateScore(); // Increment score when hole animation resets (already called in generateRectangles function)
+});
+
+setInterval(function(){
+    let circleTop = parseInt(window.getComputedStyle(circle).getPropertyValue("top"));
+    if(jumping==0){
+        circle.style.top = (circleTop+3)+"px";
+    }
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    let holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+    let cTop = -(500-circleTop);
+
+    if((circleTop>480)||((blockLeft<20)&&(blockLeft>-50)&&((cTop<holeTop)||(cTop>holeTop+130)))){
+        gameOver();
+    }
+
+    // Check if ball touches the hole
+    if (blockLeft > 480 && blockLeft < 530 && circleTop > 480 && circleTop < 580) {
+        updateScore(); // Increment score when ball touches hole
+    }
+
+},10);

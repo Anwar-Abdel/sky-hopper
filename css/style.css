@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  z-index: 2; /* Ensure the title is above the game */
+  z-index: 2;
 }
 
 #game {
@@ -15,8 +15,7 @@
   border: 1px solid black;
   margin: auto;
   overflow: hidden;
-  z-index: 1; /* Ensure the game is behind the title */
-  top: 200px; /* Adjust the top position to create more space for the title */
+  z-index: 1;
 }
 
 .game-over {
@@ -29,5 +28,15 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
-  z-index: 2; /* Ensure the game over message is above the game */
+  z-index: 2; 
+}
+
+#block {
+  width: 50px;
+  height: 500px;
+  background-color: rgb(17, 154, 81);
+  position: relative;
+  left: 400px;
+  animation: block 2s infinite linear;
+  z-index: 1;
 }
