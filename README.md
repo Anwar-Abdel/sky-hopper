@@ -6,3 +6,4 @@ In this game, the player must navigate through an array of obstacles to achieve 
 
 # References
 - https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
+- https://github.com/SEBPT220/canvas-shrek-crawler
