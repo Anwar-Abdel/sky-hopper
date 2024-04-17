@@ -38,6 +38,7 @@ setInterval(function(){
     let cTop = -(500-circleTop);
 
     if((circleTop>480)||((blockLeft<20)&&(blockLeft>-50)&&((cTop<holeTop)||(cTop>holeTop+130)))){
+        alert("Game over. Score: "+(counter-1));
         gameOver();
     }
 
