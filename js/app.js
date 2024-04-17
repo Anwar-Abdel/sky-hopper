@@ -71,6 +71,15 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// ==================Function to show "Game Over"=====================//
+function gameOver(){
+    document.getElementById("game-over-text").style.display = "block"; // Show "Game Over" text
+    document.getElementById("final-score").textContent = counter; // Update final score
+    circle.style.top = 100 + "px";
+    counter=0;
+    document.getElementById("score").textContent = counter; // Update the HTML score
+}
+
 // ==================Function to freeze the game=====================//
 function freezeGame() {
     clearInterval(movementInterval); // Stop ball movement
@@ -109,3 +118,4 @@ function startGame() {
     generateRectangles();
     movementInterval = setInterval(moveBall, 10);
 }
+
