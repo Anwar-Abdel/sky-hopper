@@ -97,3 +97,15 @@ function moveBall() {
         return; // Exit the function early to prevent further movement
     }
 }
+
+// ==================Function to start the game=====================//
+function startGame() {
+    circle.style.top = "100px"; // Reset ball position
+    jumping = 0; // Reset jumping variable
+    hole.style.top = "0px"; // Reset hole position
+    clearInterval(rectangleInterval);
+    counter = 0; // Reset score counter
+    document.getElementById("score").textContent = "0"; // Reset the HTML score
+    generateRectangles();
+    movementInterval = setInterval(moveBall, 10);
+}
