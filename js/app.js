@@ -76,3 +76,24 @@ function freezeGame() {
     clearInterval(movementInterval); // Stop ball movement
     clearInterval(rectangleInterval); // Stop rectangle generation
 }
+
+// ==================Function to move the ball=====================//
+function moveBall() {
+    let circleTop = parseInt(window.getComputedStyle(circle).getPropertyValue("top"));
+    if(jumping==0){
+        circle.style.top = (circleTop+3)+"px";
+    }
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    let holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+    let cTop = -(500-circleTop);
+
+    if((circleTop>480)||((blockLeft<20)&&(blockLeft>-50)&&((cTop<holeTop)||(cTop>holeTop+130)))){
+        gameOver();
+    }
+
+    // Check if ball touches the hole
+    if (blockLeft > 480 && blockLeft < 530 && circleTop > 480 && circleTop < 580) {
+        freezeGame(); // Call freezeGame function if ball touches hole
+        return; // Exit the function early to prevent further movement
+    }
+}
