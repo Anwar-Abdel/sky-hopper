@@ -70,3 +70,9 @@ document.addEventListener('keydown', function(event) {
         jump();
     }
 });
+
+// ==================Function to freeze the game=====================//
+function freezeGame() {
+    clearInterval(movementInterval); // Stop ball movement
+    clearInterval(rectangleInterval); // Stop rectangle generation
+}
