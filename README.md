@@ -13,7 +13,8 @@ For my approach, I began by outlining the features and layout required for the g
 ![wireframe](img/wireframe.png)
 
 # Unsolved Problems
-Some of the features I wanted to include was an option for mouse click input instead of using the spacebar, as well as reducing the spawn time of the generated rectangles to increase the challenge for the player.
+Some of the features I wanted to include was an option for mouse click input instead of using the spacebar, as well as reducing the spawn time of the generated rectangles to increase the challenge for the player. Also,
+have the rectangles spawn at a later time because I found that in some loops, the rectangles would spawn right next to the red ball and the game would end immediately.
 
 # References
 - https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
